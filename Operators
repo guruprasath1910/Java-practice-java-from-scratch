@@ -1,0 +1,46 @@
+public class Main {
+    public static void main(String[] args) {
+
+        // ── Basic arithmetic ──────────────────────────────────────────────
+        int a = 17, b = 5;
+        System.out.println(a + b);   // 22  — addition
+        System.out.println(a - b);   // 12  — subtraction
+        System.out.println(a * b);   // 85  — multiplication
+        System.out.println(a / b);   // 3   — INTEGER division (truncates, no remainder)
+        System.out.println(a % b);   // 2   — modulo (remainder after division)
+
+        // ── TRAP 1: Integer division ──────────────────────────────────────
+        System.out.println(7 / 2);    // 3  (NOT 3.5!)
+        System.out.println(7.0 / 2);  // 3.5 — at least one operand must be double/float
+        System.out.println((double) 7 / 2);  // 3.5 — explicit cast to force double division
+
+        // ── TRAP 2: Integer overflow ──────────────────────────────────────
+        int max = Integer.MAX_VALUE;     // 2,147,483,647
+        System.out.println(max + 1);     // -2,147,483,648 — silently WRAPS AROUND!
+        // Fix: use long
+        System.out.println((long) max + 1); // 2,147,483,648
+
+        // ── Increment and Decrement ───────────────────────────────────────
+        int x = 10;
+        System.out.println(x++);  // 10 — returns THEN increments (post-increment)
+        System.out.println(x);    // 11
+        System.out.println(++x);  // 12 — increments THEN returns (pre-increment)
+
+        // ── Compound assignment operators (shorthand) ─────────────────────
+        int n = 10;
+        n += 5;   // n = n + 5  → 15
+        n -= 3;   // n = n - 3  → 12
+        n *= 2;   // n = n * 2  → 24
+        n /= 4;   // n = n / 4  → 6
+        n %= 4;   // n = n % 4  → 2
+        System.out.println(n);    // 2
+
+        // ── Math class for advanced operations ────────────────────────────
+        System.out.println(Math.pow(2, 10));     // 1024.0 — 2^10
+        System.out.println(Math.sqrt(144));      // 12.0
+        System.out.println(Math.abs(-42));       // 42
+        System.out.println(Math.max(17, 42));    // 42
+        System.out.println(Math.min(17, 42));    // 17
+        System.out.println(Math.round(3.7));     // 4
+    }
+}
