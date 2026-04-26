@@ -1,0 +1,38 @@
+// Java has exactly 8 primitive types. They store values directly (not references).
+
+public class Main {
+    public static void main(String[] args) {
+
+        // ── Integer types (whole numbers) ────────────────────────────────
+        byte   b  = 127;           // 8-bit.  Range: -128 to 127
+        short  s  = 32_000;        // 16-bit. Range: -32,768 to 32,767
+        int    i  = 2_000_000;     // 32-bit. Range: ~-2 billion to ~2 billion  ← most common
+        long   l  = 9_000_000_000L;// 64-bit. Range: ~-9.2 quintillion to ~9.2 quintillion
+        //         Note the 'L' suffix — required for long literals
+
+        // ── Floating-point types (decimal numbers) ────────────────────────
+        float  f  = 3.14f;         // 32-bit. ~7 decimal digits of precision.
+        //         Note the 'f' suffix — required for float literals
+        double d  = 3.14159265358; // 64-bit. ~15 decimal digits of precision ← most common
+
+        // ── Character type ─────────────────────────────────────────────────
+        char   c  = 'A';           // 16-bit Unicode character. Note: SINGLE quotes.
+        char   c2 = 65;            // Same as 'A' — chars are just numbers (Unicode)
+        char   c3 = '\u0041';      // Same as 'A' — Unicode escape sequence
+
+        // ── Boolean type ───────────────────────────────────────────────────
+        boolean flag = true;       // Only two values: true or false. NOT 0/1.
+
+        // ── Underscore separators in literals (Java 7+) ───────────────────
+        int million  = 1_000_000;      // Much more readable than 1000000
+        long billion = 1_000_000_000L;
+        double pi    = 3.141_592_653;
+
+        // ── Hexadecimal, Octal, Binary literals ───────────────────────────
+        int hex    = 0xFF;       // 255 in decimal. Prefix: 0x
+        int octal  = 0377;       // 255 in decimal. Prefix: 0
+        int binary = 0b1111_1111; // 255 in decimal. Prefix: 0b (Java 7+)
+
+        System.out.println(hex == octal && octal == binary); // true
+    }
+}
