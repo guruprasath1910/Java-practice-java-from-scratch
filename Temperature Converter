@@ -1,0 +1,8 @@
+public class Main{
+    public static void main(String[] args)
+    {
+        double value = 100.0;
+        double fahrenheit = (value * 9.0/5)+32;
+        System.out.println(fahrenheit);
+    }
+}
