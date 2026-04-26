@@ -1,0 +1,21 @@
+The flowchart you requested (generated above) shows these steps visually:
+
+Write Source Code (.java)  
+↓
+
+Compile with javac → Bytecode (.class)  
+↓
+
+ClassLoader loads bytecode into JVM  
+↓
+
+Bytecode Verified by JVM  
+↓
+
+JIT Compiler translates to native code  
+↓
+
+Execution by JVM Runtime  
+↓
+
+Output displayed on screen
