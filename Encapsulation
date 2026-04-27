@@ -1,0 +1,33 @@
+class Temperature
+{
+    private double Celsius;
+    public void setCelsius(double n)
+    {
+        if(n>=-273.15)
+        {
+            Celsius = n;
+        }
+        else
+        {
+            System.out.println("Temperature out of range");
+        }
+
+    }
+    public double  getCelsius()
+    {
+        return Celsius;
+    }
+
+
+}
+
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Temperature v = new Temperature();
+        v.setCelsius(-311.05d);
+        System.out.println(v.getCelsius());
+    }
+}
